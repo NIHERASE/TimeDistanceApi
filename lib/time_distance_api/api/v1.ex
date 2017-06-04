@@ -15,7 +15,10 @@ defmodule TimeDistanceApi.Api.V1 do
     case params do
       %{ "origin_lat" => origin_lat, "origin_lon" => origin_lon, "dest_lat" => dest_lat, "dest_lon" => dest_lon} ->
         request = %TimeDistanceApi.Request{origin_lat: origin_lat, origin_lon: origin_lon, dest_lat: dest_lat, dest_lon: dest_lon}
-        { :ok, request }
+        case TimeDistanceApi.Request.valid?(request) do
+          true -> { :ok, request }
+          false -> { :error, :malformed_request }
+        end
       _ ->
         { :error, :malformed_request }
     end
