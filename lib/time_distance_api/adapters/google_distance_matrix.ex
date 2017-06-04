@@ -1,9 +1,10 @@
 defmodule TimeDistanceApi.Adapters.GoogleDistanceMatrix do
   def verify_configuration do
+    endpoint()
     api_key()
   end
 
-  def calculate(%TimeDistanceApi.Request{} = request) do
+  def execute!(%TimeDistanceApi.Request{} = request) do
     %{ body: body,
        status_code: 200
     } = HTTPoison.get!(construct_uri(request))
@@ -40,12 +41,15 @@ defmodule TimeDistanceApi.Adapters.GoogleDistanceMatrix do
     to_string URI.merge(endpoint(), "?#{query}")
   end
 
-  defp endpoint do
-    "https://maps.googleapis.com/maps/api/distancematrix/json"
+  defp config do
+    Application.fetch_env!(:time_distance_api, __MODULE__)
   end
 
   defp api_key do
-    config = Application.fetch_env!(:time_distance_api, __MODULE__)
-    config[:api_key] || raise("API key missing")
+    config()[:api_key] || raise("API key missing")
+  end
+
+  defp endpoint do
+    config()[:endpoint] || raise("Endpoint missing")
   end
 end
