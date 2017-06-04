@@ -10,7 +10,7 @@ defmodule TimeDistanceApi.FallbackChain do
   end
   defp execute_chain([module | rest], request) do
     case run_with_module(module, request) do
-      nil -> IO.inspect(rest); execute_chain(rest, request)
+      nil -> execute_chain(rest, request)
       response -> response
     end
   end

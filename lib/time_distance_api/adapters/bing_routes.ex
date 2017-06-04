@@ -6,7 +6,6 @@ defmodule TimeDistanceApi.Adapters.BingRoutes do
   end
 
   def execute!(%TimeDistanceApi.Request{} = request) do
-    IO.puts("runs!")
     case HTTPoison.get!(construct_uri(request)) do
       %{ body: body, status_code: 200 } ->
         { :ok, response } = Poison.decode(body)
