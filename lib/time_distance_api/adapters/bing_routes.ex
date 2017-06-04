@@ -22,11 +22,12 @@ defmodule TimeDistanceApi.Adapters.BingRoutes do
       "statusDescription" => "OK",
       "resourceSets" => [%{
         "resources" => [%{
-          "travelDistance" => distance,
+          "travelDistance" => distance_km,
           "travelDuration" => duration
         }]
       }]
     } = response
+    distance = Float.ceil(distance_km * 1000)
     { :ok, %TimeDistanceApi.Result{ duration: duration, distance: distance } }
   end
 
@@ -42,12 +43,15 @@ defmodule TimeDistanceApi.Adapters.BingRoutes do
     to_string URI.merge(endpoint(), "?#{query}")
   end
 
-  defp endpoint do
-    "http://dev.virtualearth.net/REST/v1/Routes"
+  defp config do
+    Application.fetch_env!(:time_distance_api, __MODULE__)
   end
 
   defp api_key do
-    config = Application.fetch_env!(:time_distance_api, __MODULE__)
-    config[:api_key] || raise("API key missing")
+    config()[:api_key] || raise("API key missing")
+  end
+
+  defp endpoint do
+    config()[:endpoint] || raise("Endpoint missing")
   end
 end
