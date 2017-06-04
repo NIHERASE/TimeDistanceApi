@@ -1,7 +1,7 @@
 use Mix.Config
 
 config :time_distance_api,
-  cowboy_port: 8080
+  cowboy_port: 4000
 
 config :logger, level: :info
 
