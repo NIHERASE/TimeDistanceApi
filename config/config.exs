@@ -10,7 +10,9 @@ use Mix.Config
 
 # You can configure for your application as:
 #
-#     config :time_distance_api, key: :value
+config :time_distance_api, TimeDistanceApi.Adapters.GoogleDistanceMatrix,
+  api_key: "AIzaSyAs63CQqv9v46a1x0YrjOgZdMjeXCzlQzg"
+
 #
 # And access this configuration in your application as:
 #
