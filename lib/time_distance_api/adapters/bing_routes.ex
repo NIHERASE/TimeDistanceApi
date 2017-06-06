@@ -1,16 +1,12 @@
-require IEx
-
 defmodule TimeDistanceApi.Adapters.BingRoutes do
-  def verify_configuration do
-    api_key()
-  end
-
   def execute!(%TimeDistanceApi.Request{} = request) do
     case HTTPoison.get!(construct_uri(request)) do
       %{ body: body, status_code: 200 } ->
         { :ok, response } = Poison.decode(body)
         parse_response(response)
       %{ status_code: 404 } ->
+        { :error, :no_route }
+      %{ status_code: 400 } ->
         { :error, :no_route }
       response ->
         raise("Could not parse #{inspect(response)}")

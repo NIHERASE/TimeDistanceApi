@@ -1,0 +1,30 @@
+[
+  {
+    "request": {
+      "body": "",
+      "headers": [],
+      "method": "get",
+      "options": [],
+      "request_body": "",
+      "url": "http://dev.virtualearth.net/REST/v1/Routes?distanceUnit=km&key=Aux12gFGgwS72DEM8dl31gNLprHxFFCPrhyNgk3x9KRJLkSFlU38A7jrmTQBS7bZ&maxSolutions=1&routeAttributes=routeSummariesOnly&wayPoint.1=0.0%2C0.0&wayPoint.2=80.0%2C170.0"
+    },
+    "response": {
+      "body": "{\"authenticationResultCode\":\"ValidCredentials\",\"brandLogoUri\":\"http:\\/\\/dev.virtualearth.net\\/Branding\\/logo_powered_by.png\",\"copyright\":\"Copyright © 2017 Microsoft and its suppliers. All rights reserved. This API cannot be accessed and the content and any results may not be used, reproduced or transmitted in any manner without express written permission from Microsoft Corporation.\",\"errorDetails\":[\"One or more parameters are not valid.\",\"waypoint: One or more locations specified in the waypoint parameter are invalid or require more information. : 0.0,0.0\"],\"resourceSets\":[],\"statusCode\":400,\"statusDescription\":\"Bad Request\",\"traceId\":\"86eeae3c83dd497f9ab3831dcf7934fa|DB40080942|7.7.0.0|\"}",
+      "headers": {
+        "Cache-Control": "no-cache",
+        "Transfer-Encoding": "chunked",
+        "Content-Type": "application/json; charset=utf-8",
+        "Server": "Microsoft-IIS/8.0",
+        "X-BM-TraceID": "86eeae3c83dd497f9ab3831dcf7934fa",
+        "X-BM-FE-Elapsed": "5",
+        "X-BM-Srv": "DB40080942",
+        "X-MS-BM-WS-INFO": "0",
+        "X-AspNet-Version": "4.0.30319",
+        "X-Powered-By": "ASP.NET",
+        "Date": "Tue, 06 Jun 2017 06:52:45 GMT"
+      },
+      "status_code": 400,
+      "type": "ok"
+    }
+  }
+]

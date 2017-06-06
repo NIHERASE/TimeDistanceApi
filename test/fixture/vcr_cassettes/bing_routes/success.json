@@ -1,0 +1,30 @@
+[
+  {
+    "request": {
+      "body": "",
+      "headers": [],
+      "method": "get",
+      "options": [],
+      "request_body": "",
+      "url": "http://dev.virtualearth.net/REST/v1/Routes?distanceUnit=km&key=Aux12gFGgwS72DEM8dl31gNLprHxFFCPrhyNgk3x9KRJLkSFlU38A7jrmTQBS7bZ&maxSolutions=1&routeAttributes=routeSummariesOnly&wayPoint.1=55.776451%2C37.655212&wayPoint.2=55.757399%2C37.660853"
+    },
+    "response": {
+      "body": "{\"authenticationResultCode\":\"ValidCredentials\",\"brandLogoUri\":\"http:\\/\\/dev.virtualearth.net\\/Branding\\/logo_powered_by.png\",\"copyright\":\"Copyright © 2017 Microsoft and its suppliers. All rights reserved. This API cannot be accessed and the content and any results may not be used, reproduced or transmitted in any manner without express written permission from Microsoft Corporation.\",\"resourceSets\":[{\"estimatedTotal\":1,\"resources\":[{\"__type\":\"Route:http:\\/\\/schemas.microsoft.com\\/search\\/local\\/ws\\/rest\\/v1\",\"id\":\"v69,h316815477,i0,a0,cen-US,d_z839HUoyis1,y1,s1,m1,o1,t0,wJ_kRv2LjS0Av-Z_83dNCQA2~A47k_mgxOTE5AADgAXu5Oz4C0~cHJvZXpkIEtvbXNvbW9sJ3Nrb3kgUGxvc2hjaGFkaQ2~~~~v10,w9YJPc_LgS0BUO8PUltRCQA2~A47k_mhB6TM5AADgAZNCuD4C0~cm9hZA2~~~~v10,k1,n2\",\"distanceUnit\":\"Kilometer\",\"durationUnit\":\"Second\",\"travelDistance\":5.128,\"travelDuration\":640,\"travelDurationTraffic\":1098}]}],\"statusCode\":200,\"statusDescription\":\"OK\",\"traceId\":\"fd43e3fc895b4ce380093afb74900603|DB40080942|7.7.0.0|DB40251501, DB40061025\"}",
+      "headers": {
+        "Cache-Control": "no-cache",
+        "Transfer-Encoding": "chunked",
+        "Content-Type": "application/json; charset=utf-8",
+        "Server": "Microsoft-IIS/8.0",
+        "X-BM-TraceID": "fd43e3fc895b4ce380093afb74900603",
+        "X-BM-FE-Elapsed": "38",
+        "X-BM-Srv": "DB40080942, DB40251501, DB40061025",
+        "X-MS-BM-WS-INFO": "0",
+        "X-AspNet-Version": "4.0.30319",
+        "X-Powered-By": "ASP.NET",
+        "Date": "Tue, 06 Jun 2017 06:52:45 GMT"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]

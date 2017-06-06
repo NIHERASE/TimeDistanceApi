@@ -1,9 +1,4 @@
 defmodule TimeDistanceApi.Adapters.GoogleDistanceMatrix do
-  def verify_configuration do
-    endpoint()
-    api_key()
-  end
-
   def execute!(%TimeDistanceApi.Request{} = request) do
     %{ body: body,
        status_code: 200

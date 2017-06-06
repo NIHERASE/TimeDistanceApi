@@ -1,0 +1,30 @@
+[
+  {
+    "request": {
+      "body": "",
+      "headers": [],
+      "method": "get",
+      "options": [],
+      "request_body": "",
+      "url": "https://maps.googleapis.com/maps/api/distancematrix/json?destinations=55.757399%2C37.660853&key=AIzaSyAs63CQqv9v46a1x0YrjOgZdMjeXCzlQzg&origins=55.776451%2C37.655212&units=metric"
+    },
+    "response": {
+      "body": "{\n   \"destination_addresses\" : [ \"pl. Kurskogo Vokzala, 29, Moskva, Russia, 105064\" ],\n   \"origin_addresses\" : [ \"Komsomolskaya pl., 1, Moskva, Russia, 107140\" ],\n   \"rows\" : [\n      {\n         \"elements\" : [\n            {\n               \"distance\" : {\n                  \"text\" : \"5.2 km\",\n                  \"value\" : 5181\n               },\n               \"duration\" : {\n                  \"text\" : \"13 mins\",\n                  \"value\" : 790\n               },\n               \"status\" : \"OK\"\n            }\n         ]\n      }\n   ],\n   \"status\" : \"OK\"\n}\n",
+      "headers": {
+        "Content-Type": "application/json; charset=UTF-8",
+        "Date": "Tue, 06 Jun 2017 06:37:23 GMT",
+        "Expires": "Wed, 07 Jun 2017 06:37:23 GMT",
+        "Cache-Control": "public, max-age=86400",
+        "Server": "mafe",
+        "X-XSS-Protection": "1; mode=block",
+        "X-Frame-Options": "SAMEORIGIN",
+        "Alt-Svc": "quic=\":443\"; ma=2592000; v=\"38,37,36,35\"",
+        "Accept-Ranges": "none",
+        "Vary": "Accept-Language,Accept-Encoding",
+        "Transfer-Encoding": "chunked"
+      },
+      "status_code": 200,
+      "type": "ok"
+    }
+  }
+]
